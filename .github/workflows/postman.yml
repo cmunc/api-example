@@ -26,7 +26,7 @@ jobs:
         run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
 
       - name: Run Postman Tests
-        uses: BerniWittmann/background-server-action@latest
+        uses: BerniWittmann/background-server-action@v1.0.4
         with:
           command: postman collection run "4231467-b3b6b594-0e12-4514-9d79-bc352c002be4"
           start: flask run --host=0.0.0.0 --port 5000
